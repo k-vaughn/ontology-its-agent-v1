@@ -1,0 +1,22 @@
+BASE <https://w3id.org/itsdata/agent/v1/>
+PREFIX : <https://w3id.org/itsdata/agent/v1/>
+PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
+PREFIX its-sh: <https://w3id.org/itsdata/shapes/v1/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+:RoleShape a sh:NodeShape ;
+    sh:targetClass :Role ;
+    sh:property [
+        sh:path cdm1:hasName ;
+        sh:node its-sh:ExactlyOneMultilingualShape ;
+    ] .
+
+:AgentShape a sh:NodeShape ;
+    sh:targetClass :Agent ;
+    sh:property [
+        sh:path :playsRole ;
+        sh:class :Role ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Values of :playsRole must be valid :Role instances." ;
+        # No cardinality constraint → default 0..*
+    ] .
