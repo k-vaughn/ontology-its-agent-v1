@@ -1,16 +1,26 @@
-# ITS Agent Pattern
+# ITS Agent Ontology
+
+![Draft for review only](https://isotc204.org/assets/img/draft_for_review.svg)
 
 This ontology defines concepts related to ITS agents.
 
-This pattern imports the following files:
+This ontology imports the following files:
 
 - [https://w3id.org/citydata/part1/v1/Agent.owl](https://w3id.org/citydata/part1/v1/Agent.owl)
 
-This pattern consists of the following classes:
 
-- [Agent](Agent.md)
-- [ITS Agent Thing](ITSAgentThing.md)
-- [Role](Role.md)
+## Ontology concepts
 
-The formal definition of this pattern is available in [OWL Syntax](ITSAgentPattern.owl).
+### Classes
 
+- [Agent](classes/Agent.md)
+- [Its Agent Thing](classes/ITSAgentThing.md)
+- [Role](classes/Role.md)
+
+### Properties
+
+- [ITSAgentObjectProperty](properties/ITSAgentObjectProperty.md)
+- [playsRole](properties/playsRole.md)
+
+
+The formal definition of this ontology is available in [TURTLE Syntax](its-agent.ttl).
